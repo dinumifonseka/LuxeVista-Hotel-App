@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/ivHotelHeader"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/kandy"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvHotelTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="-40dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/ivHotelHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LuxeVista Kandy"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/luxe_green" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cultural Heritage Retreat"
+                    android:textSize="16sp"
+                    android:textColor="@color/luxe_green"
+                    android:layout_marginTop="4dp" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:rating="5"
+                    android:progressTint="@color/luxe_gold"
+                    style="?android:attr/ratingBarStyleSmall" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvCityTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="About Kandy"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/cvHotelTitle" />
+
+        <View
+            android:id="@+id/dividerCity"
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="@color/luxe_green"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCityTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCityDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kandy, Sri Lanka's cultural capital and a UNESCO World Heritage site, nestles among lush hills in the central highlands. The city is revered as home to the Temple of the Sacred Tooth Relic, one of Buddhism's most sacred shrines. Surrounded by misty mountains and vibrant tea plantations, Kandy beautifully blends natural splendor with rich cultural heritage. The city's colonial architecture, sacred temples, botanical gardens, and serene lake create a mystical atmosphere that transports visitors to a bygone era. Kandy's annual Esala Perahera, a grand procession featuring elaborately adorned elephants, dancers, and drummers, stands as one of Asia's most spectacular cultural festivals."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="6dp"
+            app:layout_constraintTop_toBottomOf="@id/dividerCity" />
+
+
+        <TextView
+            android:id="@+id/tvHotelTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our Luxury Hotel"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCityDescription" />
+
+        <View
+            android:id="@+id/dividerHotel"
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="@color/luxe_green"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvHotelTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvHotelDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LuxeVista Kandy is an architectural masterpiece perched on a hillside overlooking the sacred city and Kandy Lake. The hotel seamlessly integrates into its natural surroundings, with 102 rooms and suites offering breathtaking panoramic views of the mist-covered mountains and lush forests.\n\nGuests can indulge in authentic hill country cuisine at our signature restaurant featuring locally sourced ingredients, rejuvenate at our award-winning spa offering traditional Ceylonese treatments, or take a refreshing dip in our infinity pool that seems to merge with the horizon.\n\nOur expert cultural concierge team arranges private tours to nearby attractions including the Temple of the Tooth Relic, Royal Botanical Gardens, and tea plantations. We also provide unique experiences such as private cultural performances, tea tasting ceremonies, and cooking classes focused on traditional Kandyan cuisine.\n\nAt LuxeVista Kandy, we invite guests to experience the perfect balance of cultural immersion and luxurious comfort in Sri Lanka's spiritual heartland."
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="6dp"
+            app:layout_constraintTop_toBottomOf="@id/dividerHotel" />
+
+
+        <TextView
+            android:id="@+id/tvLeadershipTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Our Leadership"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/tvHotelDescription" />
+
+        <View
+            android:id="@+id/dividerLeadership"
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="@color/luxe_green"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvLeadershipTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLeadership"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/dividerLeadership">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/dinumi"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dinumi Fonseka"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_dark"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="General Manager"
+                        android:textSize="14sp"
+                        android:textColor="@color/luxe_green" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/luxe_green"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:src="@drawable/nethmi"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nethmi Punchihewa"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_dark"
+                        android:layout_marginTop="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Guest Experience Director"
+                        android:textSize="14sp"
+                        android:textColor="@color/luxe_green" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <TextView
+            android:id="@+id/tvGalleryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hotel Gallery"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintTop_toBottomOf="@id/cvLeadership" />
+
+        <View
+            android:id="@+id/dividerGallery"
+            android:layout_width="60dp"
+            android:layout_height="3dp"
+            android:background="@color/luxe_green"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/tvGalleryTitle"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Gallery Grid -->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/galleryGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
+            app:columnCount="2"
+            app:layout_constraintTop_toBottomOf="@id/dividerGallery">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/pool3" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/buffet3" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/lobby3" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/room3" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kandy1" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_margin="4dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_columnWeight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kandy2" />
+            </androidx.cardview.widget.CardView>
+        </androidx.gridlayout.widget.GridLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:tint="@color/luxe_green"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/galleryGrid"
+            app:srcCompat="@drawable/logo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

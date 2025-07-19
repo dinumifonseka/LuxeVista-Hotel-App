@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="luxe_green">#090040</color>
+    <color name="luxe_green_light">#471396</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#888888</color>
+    <color name="black">#000000</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="hint_gray">#CCCCCC</color>
+    <color name="text_dark">#333333</color>
+    <color name="transparent">#00000000</color>
+    <color name="error_red">#F44336</color>
+    <color name="red_accent">#D32F2F</color>
+    <color name="luxe_green_light_transparent">#40A2D289</color>
+    <color name="luxe_gold">#B13BFF</color>
+    <color name="luxe_accent">#F7E7CE</color>
+    <color name="background_light">#F9F9F9</color>
+
+
+    <color name="luxe_deep_green">#0A4741</color>
+    <color name="luxe_gold_light">#E9C972</color>
+    <color name="luxe_gold_dark">#B8952E</color>
+    <color name="text_medium">#666666</color>
+    <color name="text_light">#999999</color>
+    <color name="white_70">#B3FFFFFF</color>
+</resources>
