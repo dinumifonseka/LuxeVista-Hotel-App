@@ -5,25 +5,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorSurface"
+    android:background="@color/white"
     tools:context=".Activity_Pages.ExploreActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:theme="@style/ThemeOverlay.Material3.Dark">
+        android:layout_height="300dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="@color/luxe_green"
             app:expandedTitleMarginEnd="64dp"
             app:expandedTitleMarginStart="48dp"
-            app:expandedTitleTextAppearance="@style/TextAppearance.Material3.HeadlineLarge"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
-            app:statusBarScrim="?attr/colorPrimary">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -35,84 +33,41 @@
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/hotelhh"
-                    app:layout_collapseMode="parallax"
-                    app:layout_collapseParallaxMultiplier="0.5"/>
+                    app:layout_collapseMode="parallax"/>
 
-                <!-- Modern Glass-morphism Overlay -->
+                <ImageView
+                    android:id="@+id/exploreback"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/arrow_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/hero_gradient_md3"
+                    android:background="@drawable/hero_gradient"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <!-- Enhanced Back Button -->
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    app:cardBackgroundColor="@color/md_theme_surface_container_high"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="0dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:strokeWidth="0dp">
-
-                    <ImageView
-                        android:id="@+id/exploreback"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/arrow_back"
-                        android:tint="?attr/colorOnSurface" />
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- Hero Title with Enhanced Typography -->
-                <LinearLayout
-                    android:layout_width="0dp"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="40dp"
-                    android:orientation="vertical"
+                    android:layout_marginBottom="32dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Welcome to LuxeVista"
+                    android:textColor="@color/white"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/google_sans_display"
-                        android:text="Welcome to"
-                        android:textColor="@color/md_theme_on_primary"
-                        android:textSize="18sp"
-                        android:alpha="0.87"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/google_sans_display"
-                        android:text="LuxeVista"
-                        android:textColor="@color/white"
-                        android:textSize="36sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.02"/>
-
-                    <!-- Subtitle -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="@font/google_sans"
-                        android:text="Experience Luxury Beyond Imagination"
-                        android:textColor="@color/md_theme_on_primary"
-                        android:textSize="14sp"
-                        android:alpha="0.75"/>
-                </LinearLayout>
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="24dp"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -120,434 +75,358 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="88dp"
+        android:paddingBottom="24dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="8dp">
+            android:orientation="vertical">
 
-            <!-- Enhanced Top Section Card with Material 3 -->
-            <com.google.android.material.card.MaterialCardView
+            <!-- Top Section Card -->
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="24dp"
-                app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                app:cardCornerRadius="28dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp">
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="28dp">
+                    android:padding="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/google_sans_display"
+                        android:fontFamily="sans-serif-medium"
                         android:text="Your Luxury Experience"
-                        android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
-                        android:textColor="?attr/colorPrimary"
-                        android:letterSpacing="0.02"/>
+                        android:textColor="@color/luxe_green"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
-                    <!-- Modern Accent Line -->
                     <View
-                        android:layout_width="80dp"
-                        android:layout_height="4dp"
-                        android:layout_marginVertical="16dp"
-                        android:background="@drawable/accent_line_gradient" />
+                        android:layout_width="60dp"
+                        android:layout_height="3dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="@color/luxe_gold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/google_sans"
-                        android:lineSpacingMultiplier="1.4"
-                        android:text="Discover what makes LuxeVista the perfect destination for your retreat. Our exclusive services and amenities are designed to provide the ultimate luxury experience with unparalleled attention to detail."
-                        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
-                        android:textColor="?attr/colorOnSurfaceVariant"/>
+                        android:fontFamily="sans-serif"
+                        android:lineSpacingExtra="4dp"
+                        android:text="Discover what makes LuxeVista the perfect destination for your retreat. Our exclusive services and amenities are designed to provide the ultimate luxury experience."
+                        android:textColor="@color/text_dark"
+                        android:textSize="14sp" />
 
-                    <!-- Enhanced Button Layout -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:orientation="horizontal"
-                        android:gravity="center">
+                        android:layout_marginTop="16dp"
+                        android:orientation="horizontal">
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/buttonBookNow"
                             android:layout_width="0dp"
                             android:layout_height="56dp"
                             android:layout_weight="1"
-                            android:fontFamily="@font/google_sans_medium"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="0.05"
                             android:text="Book Now"
                             android:textAllCaps="false"
                             android:textSize="16sp"
-                            android:letterSpacing="0.02"
-                            app:backgroundTint="?attr/colorPrimary"
+                            app:backgroundTint="@color/luxe_gold"
                             app:cornerRadius="28dp"
-                            app:elevation="0dp"
-                            app:icon="@drawable/ic_calendar_check"
-                            app:iconGravity="textStart"
-                            app:iconPadding="8dp"
-                            app:iconTint="?attr/colorOnPrimary"/>
+                            app:elevation="4dp" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/buttonVirtualTour"
-                            style="@style/Widget.Material3.Button.TonalButton"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                             android:layout_width="0dp"
                             android:layout_height="56dp"
-                            android:layout_marginStart="16dp"
+                            android:layout_marginStart="12dp"
                             android:layout_weight="1"
-                            android:fontFamily="@font/google_sans_medium"
+                            android:fontFamily="sans-serif-medium"
+                            android:letterSpacing="0.05"
                             android:text="Virtual Tour"
                             android:textAllCaps="false"
+                            android:textColor="@color/luxe_green"
                             android:textSize="16sp"
-                            android:letterSpacing="0.02"
                             app:cornerRadius="28dp"
-                            app:icon="@drawable/ic_360_view"
-                            app:iconGravity="textStart"
-                            app:iconPadding="8dp"/>
+                            app:strokeColor="@color/luxe_green"
+                            app:strokeWidth="1dp" />
                     </LinearLayout>
                 </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            </androidx.cardview.widget.CardView>
 
-            <!-- Enhanced Features Section -->
-            <LinearLayout
+            <!-- Features Section -->
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="8dp"
-                android:orientation="vertical">
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="What We Offer"
+                android:textColor="@color/luxe_green"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/google_sans_display"
-                    android:text="What We Offer"
-                    android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
-                    android:textColor="?attr/colorOnSurface"
-                    android:letterSpacing="0.02"/>
+            <View
+                android:layout_width="60dp"
+                android:layout_height="3dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="12dp"
+                android:background="@color/luxe_gold" />
 
-                <View
-                    android:layout_width="80dp"
-                    android:layout_height="4dp"
-                    android:layout_marginVertical="16dp"
-                    android:background="@drawable/accent_line_gradient" />
-            </LinearLayout>
-
-            <!-- Enhanced Feature Items Grid with Material 3 Cards -->
+            <!-- Feature Items Grid -->
             <androidx.gridlayout.widget.GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="8dp"
                 app:columnCount="2"
-                app:rowCount="2"
-                app:useDefaultMargins="true">
+                app:rowCount="3">
 
-                <!-- Premium Feature Card 1 -->
+                <!-- Feature 1 -->
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/cardAccommodation"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="0dp"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
                     app:layout_columnWeight="1"
-                    app:strokeWidth="0dp"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
+                    app:layout_rowWeight="1"
+                    app:strokeColor="@color/light_gray"
+                    app:strokeWidth="1dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="56dp"
-                            android:layout_height="56dp"
-                            app:cardBackgroundColor="?attr/colorPrimaryContainer"
-                            app:cardCornerRadius="28dp"
-                            app:cardElevation="0dp">
-
-                            <ImageView
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/kingbed"
-                                android:tint="?attr/colorOnPrimaryContainer" />
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:fontFamily="@font/google_sans_medium"
-                            android:text="Premium Rooms"
-                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-                            android:textColor="?attr/colorOnSurface"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:fontFamily="@font/google_sans"
-                            android:text="Luxury accommodations with breathtaking ocean views"
-                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                            android:textColor="?attr/colorOnSurfaceVariant"
-                            android:lineSpacingMultiplier="1.3"/>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- Premium Feature Card 2 -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardDining"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="0dp"
-                    app:layout_columnWeight="1"
-                    app:strokeWidth="0dp"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="56dp"
-                            android:layout_height="56dp"
-                            app:cardBackgroundColor="?attr/colorSecondaryContainer"
-                            app:cardCornerRadius="28dp"
-                            app:cardElevation="0dp">
-
-                            <ImageView
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/dining"
-                                android:tint="?attr/colorOnSecondaryContainer" />
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:fontFamily="@font/google_sans_medium"
-                            android:text="Fine Dining"
-                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-                            android:textColor="?attr/colorOnSurface"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:fontFamily="@font/google_sans"
-                            android:text="Gourmet restaurants with world-class chefs"
-                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                            android:textColor="?attr/colorOnSurfaceVariant"
-                            android:lineSpacingMultiplier="1.3"/>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- Premium Feature Card 3 -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardWellness"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="0dp"
-                    app:layout_columnWeight="1"
-                    app:strokeWidth="0dp"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="56dp"
-                            android:layout_height="56dp"
-                            app:cardBackgroundColor="?attr/colorTertiaryContainer"
-                            app:cardCornerRadius="28dp"
-                            app:cardElevation="0dp">
-
-                            <ImageView
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/carehospital"
-                                android:tint="?attr/colorOnTertiaryContainer" />
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:fontFamily="@font/google_sans_medium"
-                            android:text="Wellness Center"
-                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-                            android:textColor="?attr/colorOnSurface"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:fontFamily="@font/google_sans"
-                            android:text="Complete spa and fitness facilities"
-                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                            android:textColor="?attr/colorOnSurfaceVariant"
-                            android:lineSpacingMultiplier="1.3"/>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-
-                <!-- Premium Feature Card 4 -->
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/cardActivities"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="6dp"
-                    app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="0dp"
-                    app:layout_columnWeight="1"
-                    app:strokeWidth="0dp"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:clickable="true"
-                    android:focusable="true">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="20dp">
-
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="56dp"
-                            android:layout_height="56dp"
-                            app:cardBackgroundColor="?attr/colorErrorContainer"
-                            app:cardCornerRadius="28dp"
-                            app:cardElevation="0dp">
-
-                            <ImageView
-                                android:layout_width="28dp"
-                                android:layout_height="28dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/beach_activities"
-                                android:tint="?attr/colorOnErrorContainer" />
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="16dp"
-                            android:fontFamily="@font/google_sans_medium"
-                            android:text="Beach Activities"
-                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-                            android:textColor="?attr/colorOnSurface"/>
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:fontFamily="@font/google_sans"
-                            android:text="Water sports and beachfront entertainment"
-                            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                            android:textColor="?attr/colorOnSurfaceVariant"
-                            android:lineSpacingMultiplier="1.3"/>
-                    </LinearLayout>
-                </com.google.android.material.card.MaterialCardView>
-            </androidx.gridlayout.widget.GridLayout>
-
-            <!-- Enhanced Special Offers Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="40dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/google_sans_display"
-                    android:text="Special Offers"
-                    android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"
-                    android:textColor="?attr/colorOnSurface"
-                    android:letterSpacing="0.02"/>
-
-                <View
-                    android:layout_width="80dp"
-                    android:layout_height="4dp"
-                    android:layout_marginVertical="16dp"
-                    android:background="@drawable/accent_line_gradient" />
-            </LinearLayout>
-
-            <!-- Premium Special Offer 1 -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="8dp"
-                app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp"
-                android:foreground="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/offerImage"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="?attr/colorSurfaceContainerHighest"
-                        app:cardCornerRadius="20dp"
-                        app:cardElevation="0dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:padding="16dp">
 
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/honeymoon"
-                            android:tint="?attr/colorPrimary" />
-                    </com.google.android.material.card.MaterialCardView>
+                            android:src="@drawable/kingbed"
+                            android:tint="@color/luxe_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Premium Rooms"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Luxury accommodations with ocean views"
+                            android:textColor="@color/text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Feature 2 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardDining"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    app:strokeColor="@color/light_gray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/dining"
+                            android:tint="@color/luxe_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Fine Dining"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Gourmet restaurants with world-class chefs"
+                            android:textColor="@color/text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Feature 3 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardWellness"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    app:strokeColor="@color/light_gray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/carehospital"
+                            android:tint="@color/luxe_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Wellness Center"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Complete spa and fitness facilities"
+                            android:textColor="@color/text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Feature 4 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardActivities"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    app:strokeColor="@color/light_gray"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/beach_activities"
+                            android:tint="@color/luxe_green" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Beach Activities"
+                            android:textColor="@color/text_dark"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="sans-serif"
+                            android:text="Water sports and beachfront entertainment"
+                            android:textColor="@color/text_dark"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </androidx.gridlayout.widget.GridLayout>
+
+            <!-- Special Offers Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="Special Offers"
+                android:textColor="@color/luxe_green"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="3dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginVertical="12dp"
+                android:background="@color/luxe_gold" />
+
+            <!-- Special Offer 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/luxe_gold"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/offerImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="12dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/honeymoon"
+                        android:tint="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
                         android:orientation="vertical"
+                        android:padding="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/offerImage"
@@ -556,81 +435,70 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/google_sans_display"
+                            android:fontFamily="sans-serif-medium"
                             android:text="Honeymoon Package"
-                            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                            android:textColor="?attr/colorOnSurface"/>
+                            android:textColor="@color/luxe_green"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:fontFamily="@font/google_sans"
+                            android:fontFamily="sans-serif"
                             android:text="30% off on luxury suite, spa treatment, and romantic dinner"
-                            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                            android:textColor="?attr/colorOnSurfaceVariant"
-                            android:lineSpacingMultiplier="1.3"/>
+                            android:textColor="@color/text_dark"
+                            android:textSize="14sp" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/buttonViewOffer"
-                            style="@style/Widget.Material3.Button.TextButton"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:fontFamily="@font/google_sans_medium"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="sans-serif-medium"
                             android:text="View Details"
                             android:textAllCaps="false"
-                            android:textColor="?attr/colorPrimary"
+                            android:textColor="@color/luxe_green_light"
                             app:icon="@drawable/arrow_right"
                             app:iconGravity="end"
-                            app:iconTint="?attr/colorPrimary" />
+                            app:iconTint="@color/luxe_green_light" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Premium Special Offer 2 -->
+            <!-- Special Offer 2 -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                app:cardCornerRadius="24dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp"
-                android:foreground="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true">
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/luxe_gold"
+                app:strokeWidth="1dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="20dp">
+                    android:layout_height="wrap_content">
 
-                    <com.google.android.material.card.MaterialCardView
+                    <ImageView
                         android:id="@+id/offerImage2"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="?attr/colorSurfaceContainerHighest"
-                        app:cardCornerRadius="20dp"
-                        app:cardElevation="0dp"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="12dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/relax"
+                        android:tint="@color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <ImageView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/relax"
-                            android:tint="?attr/colorSecondary" />
-                    </com.google.android.material.card.MaterialCardView>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
                         android:orientation="vertical"
+                        android:padding="16dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toEndOf="@id/offerImage2"
@@ -639,271 +507,114 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/google_sans_display"
+                            android:fontFamily="sans-serif-medium"
                             android:text="Weekend Escape"
-                            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                            android:textColor="?attr/colorOnSurface"/>
+                            android:textColor="@color/luxe_green"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:fontFamily="@font/google_sans"
+                            android:fontFamily="sans-serif"
                             android:text="Book 2 nights and get 1 free, includes breakfast and spa access"
-                            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                            android:textColor="?attr/colorOnSurfaceVariant"
-                            android:lineSpacingMultiplier="1.3"/>
+                            android:textColor="@color/text_dark"
+                            android:textSize="14sp" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/buttonViewOffer2"
-                            style="@style/Widget.Material3.Button.TextButton"
+                            style="@style/Widget.MaterialComponents.Button.TextButton"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:fontFamily="@font/google_sans_medium"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="sans-serif-medium"
                             android:text="View Details"
                             android:textAllCaps="false"
-                            android:textColor="?attr/colorSecondary"
+                            android:textColor="@color/luxe_green_light"
                             app:icon="@drawable/arrow_right"
                             app:iconGravity="end"
-                            app:iconTint="?attr/colorSecondary" />
+                            app:iconTint="@color/luxe_green_light" />
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Enhanced Newsletter Section with Material 3 -->
+            <!-- Newsletter Section -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginTop="40dp"
-                app:cardBackgroundColor="?attr/colorPrimary"
-                app:cardCornerRadius="32dp"
-                app:cardElevation="0dp"
-                app:strokeWidth="0dp">
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="32dp"
+                app:cardBackgroundColor="@color/luxe_green"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:padding="32dp">
+                    android:padding="24dp">
 
-                    <!-- Header with Icon -->
-                    <LinearLayout
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal">
+                        android:fontFamily="sans-serif-medium"
+                        android:text="Stay Updated"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
-                        <com.google.android.material.card.MaterialCardView
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
-                            app:cardBackgroundColor="@color/md_theme_primary_container"
-                            app:cardCornerRadius="24dp"
-                            app:cardElevation="0dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Subscribe to our newsletter for exclusive offers and updates"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
 
-                            <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/ic_newsletter"
-                                android:tint="?attr/colorOnPrimaryContainer" />
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="16dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/google_sans_display"
-                                android:text="Stay Updated"
-                                android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
-                                android:textColor="?attr/colorOnPrimary"/>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:fontFamily="@font/google_sans"
-                                android:text="Get exclusive offers and luxury experiences delivered to your inbox"
-                                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
-                                android:textColor="?attr/colorOnPrimary"
-                                android:alpha="0.85"/>
-                        </LinearLayout>
-                    </LinearLayout>
-
-                    <!-- Enhanced Input Field -->
                     <com.google.android.material.textfield.TextInputLayout
-                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="24dp"
-                        android:hint="Enter your email address"
-                        app:boxCornerRadiusBottomEnd="16dp"
-                        app:boxCornerRadiusBottomStart="16dp"
-                        app:boxCornerRadiusTopEnd="16dp"
-                        app:boxCornerRadiusTopStart="16dp"
-                        app:boxStrokeColor="?attr/colorOnPrimary"
-                        app:boxStrokeWidth="2dp"
-                        app:hintTextColor="?attr/colorOnPrimary"
-                        app:startIconDrawable="@drawable/ic_email_outline"
-                        app:startIconTint="?attr/colorOnPrimary">
+                        android:layout_marginTop="16dp"
+                        android:hint="Your Email"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="@color/white"
+                        app:hintTextColor="@color/white">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/google_sans"
                             android:inputType="textEmailAddress"
-                            android:textColor="?attr/colorOnPrimary"
-                            android:textSize="16sp"/>
+                            android:textColor="@color/white" />
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <!-- Enhanced Subscribe Button -->
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/buttonSubscribe"
                         android:layout_width="match_parent"
-                        android:layout_height="64dp"
-                        android:layout_marginTop="20dp"
-                        android:fontFamily="@font/google_sans_medium"
-                        android:text="Subscribe Now"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="0.05"
+                        android:text="Subscribe"
                         android:textAllCaps="false"
                         android:textSize="16sp"
-                        android:letterSpacing="0.02"
-                        app:backgroundTint="?attr/colorOnPrimary"
-                        app:cornerRadius="32dp"
-                        app:elevation="0dp"
-                        app:icon="@drawable/ic_send"
-                        app:iconGravity="textEnd"
-                        app:iconPadding="8dp"
-                        app:iconTint="?attr/colorPrimary"/>
-
-                    <!-- Trust Indicator -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:fontFamily="@font/google_sans"
-                        android:gravity="center"
-                        android:text="🔒 We respect your privacy and never share your information"
-                        android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                        android:textColor="?attr/colorOnPrimary"
-                        android:alpha="0.75"/>
+                        app:backgroundTint="@color/luxe_gold"
+                        app:cornerRadius="28dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-
-            <!-- Premium Footer Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="24dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="16dp"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/google_sans_medium"
-                    android:text="LuxeVista Resort"
-                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
-                    android:textColor="?attr/colorPrimary"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/google_sans"
-                    android:text="Where Luxury Meets Paradise"
-                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                    android:textColor="?attr/colorOnSurfaceVariant"/>
-
-                <!-- Social Media Icons -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:orientation="horizontal">
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="4dp"
-                        app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                        app:cardCornerRadius="24dp"
-                        app:cardElevation="0dp"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_facebook"
-                            android:tint="?attr/colorPrimary" />
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="4dp"
-                        app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                        app:cardCornerRadius="24dp"
-                        app:cardElevation="0dp"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_instagram"
-                            android:tint="?attr/colorPrimary" />
-                    </com.google.android.material.card.MaterialCardView>
-
-                    <com.google.android.material.card.MaterialCardView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:layout_margin="4dp"
-                        app:cardBackgroundColor="?attr/colorSurfaceContainer"
-                        app:cardCornerRadius="24dp"
-                        app:cardElevation="0dp"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:clickable="true"
-                        android:focusable="true">
-
-                        <ImageView
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:layout_gravity="center"
-                            android:src="@drawable/ic_twitter"
-                            android:tint="?attr/colorPrimary" />
-                    </com.google.android.material.card.MaterialCardView>
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- Enhanced Floating Action Button -->
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:fontFamily="@font/google_sans_medium"
-        android:text="Contact Us"
-        android:textAllCaps="false"
-        app:backgroundTint="?attr/colorPrimary"
-        app:elevation="0dp"
-        app:icon="@drawable/ic_chat_bubble"
-        app:iconTint="?attr/colorOnPrimary"
-        app:tint="?attr/colorOnPrimary" />
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/luxe_gold"
+        android:src="@android:drawable/ic_dialog_email"
+        android:tint="@color/white"
+        app:fabSize="normal" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
