@@ -23,4 +23,10 @@
     <color name="text_medium">#666666</color>
     <color name="text_light">#999999</color>
     <color name="white_70">#B3FFFFFF</color>
+
+
+    <color name="feature_bg">#F5F5F5</color>
+    <color name="light_green_bg">#E8F5E8</color>
+
+
 </resources>
