@@ -3,216 +3,390 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="12dp">
+    android:layout_margin="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="12dp"
+    android:backgroundTint="#FFFFFF">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="24dp"
+        android:background="@android:drawable/dialog_holo_light_frame">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Complete Your Booking"
-            android:textAlignment="center"
-            android:textColor="@color/text_dark"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:id="@+id/imageViewDialogRoom"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:layout_marginTop="16dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/hotel" />
-
-        <TextView
-            android:id="@+id/textViewDialogRoomTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Deluxe Ocean View Room"
-            android:textColor="@color/text_dark"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/textViewDialogRoomPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="$250/night"
-            android:textColor="@color/luxe_green"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Select Dates"
-            android:textColor="@color/text_dark"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
+        <!-- Header Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="✨ Finalize Your Reservation"
+                android:textAlignment="center"
+                android:textColor="#1A237E"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="0.02" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="8dp"
+                android:background="#FF6B35"
+                android:layout_gravity="center" />
+        </LinearLayout>
+
+        <!-- Room Image with Overlay -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/imageViewDialogRoom"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/hotel" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/textViewDialogRoomTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🏖️ Premium Seaside Suite"
+                        android:textColor="#FFFFFF"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"
+                        android:shadowColor="#000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
+
+                    <TextView
+                        android:id="@+id/textViewDialogRoomPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="💰 $320/night"
+                        android:textColor="#4CAF50"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:background="#FFFFFF"
+                        android:padding="8dp"
+                        android:elevation="4dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Date Selection Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#F8F9FA">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Check-in"
-                    android:textColor="@color/text_dark"
-                    android:textSize="14sp" />
+                    android:text="📅 Choose Your Stay Period"
+                    android:textColor="#1A237E"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="12dp" />
 
-                <Button
-                    android:id="@+id/buttonCheckIn"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:backgroundTint="#F5F5F5"
-                    android:text="Select Date"
-                    android:textColor="@color/text_dark" />
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="✈️ Arrival"
+                            android:textColor="#424242"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="6dp" />
+
+                        <Button
+                            android:id="@+id/buttonCheckIn"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:backgroundTint="#E3F2FD"
+                            android:text="Pick Date"
+                            android:textColor="#1976D2"
+                            android:textStyle="bold"
+                            android:drawableLeft="@android:drawable/ic_menu_today"
+                            android:drawablePadding="8dp"
+                            android:elevation="2dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="🚗 Departure"
+                            android:textColor="#424242"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="6dp" />
+
+                        <Button
+                            android:id="@+id/buttonCheckOut"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:backgroundTint="#E3F2FD"
+                            android:text="Pick Date"
+                            android:textColor="#1976D2"
+                            android:textStyle="bold"
+                            android:drawableLeft="@android:drawable/ic_menu_today"
+                            android:drawablePadding="8dp"
+                            android:elevation="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Dining Options Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FFF3E0">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="16dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Check-out"
-                    android:textColor="@color/text_dark"
-                    android:textSize="14sp" />
+                    android:text="🍽️ Choose Dining Options"
+                    android:textColor="#E65100"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="12dp" />
 
-                <Button
-                    android:id="@+id/buttonCheckOut"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:backgroundTint="#F5F5F5"
-                    android:text="Select Date"
-                    android:textColor="@color/text_dark" />
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <CheckBox
+                        android:id="@+id/checkBoxBreakfast"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🌅 Morning Meal ($30)"
+                        android:textSize="12sp"
+                        android:textColor="#5D4037"
+                        android:textStyle="bold"
+                        android:buttonTint="#FF8A65"
+                        android:padding="4dp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxLunch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="☀️ Midday Meal ($40)"
+                        android:textSize="12sp"
+                        android:textColor="#5D4037"
+                        android:textStyle="bold"
+                        android:buttonTint="#FF8A65"
+                        android:padding="4dp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxDinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="🌙 Evening Meal ($55)"
+                        android:textSize="12sp"
+                        android:textColor="#5D4037"
+                        android:textStyle="bold"
+                        android:buttonTint="#FF8A65"
+                        android:padding="4dp" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+        </androidx.cardview.widget.CardView>
 
-        <TextView
+        <!-- Activities Section -->
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Select Meal Plan"
-            android:textColor="@color/text_dark"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#E8F5E8">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="🏄‍♀️ Choose Experiences"
+                    android:textColor="#2E7D32"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSpa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🧘‍♀️ Wellness Therapy ($150)"
+                        android:textSize="15sp"
+                        android:textColor="#1B5E20"
+                        android:textStyle="bold"
+                        android:buttonTint="#4CAF50"
+                        android:padding="8dp"
+                        android:layout_marginBottom="6dp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxSnorkeling"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🤿 Underwater Adventure ($95)"
+                        android:textSize="15sp"
+                        android:textColor="#1B5E20"
+                        android:textStyle="bold"
+                        android:buttonTint="#4CAF50"
+                        android:padding="8dp"
+                        android:layout_marginBottom="6dp" />
+
+                    <CheckBox
+                        android:id="@+id/checkBoxYoga"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🕉️ Mindfulness Class ($50)"
+                        android:textSize="15sp"
+                        android:textColor="#1B5E20"
+                        android:textStyle="bold"
+                        android:buttonTint="#4CAF50"
+                        android:padding="8dp"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="8dp">
 
-            <CheckBox
-                android:id="@+id/checkBoxBreakfast"
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Breakfast ($25)"
-                android:textSize="14sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxLunch"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Lunch ($35)"
-                android:textSize="14sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxDinner"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Dinner ($45)"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Select Activities"
-            android:textColor="@color/text_dark"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
-
-            <CheckBox
-                android:id="@+id/checkBoxSpa"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Spa Treatment ($120)"
-                android:textSize="14sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxSnorkeling"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Snorkeling Experience ($80)"
-                android:textSize="14sp" />
-
-            <CheckBox
-                android:id="@+id/checkBoxYoga"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Yoga Session ($40)"
-                android:textSize="14sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonCancel"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
-                android:layout_weight="1"
-                android:backgroundTint="#E0E0E0"
-                android:text="Cancel"
-                android:textColor="@color/text_dark" />
+                app:cardCornerRadius="25dp"
+                app:cardElevation="6dp">
 
-            <Button
-                android:id="@+id/buttonConfirm"
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:backgroundTint="#FFEBEE"
+                    android:text="❌ Cancel"
+                    android:textColor="#C62828"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="0dp"
+                    android:stateListAnimator="@null" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_weight="1"
-                android:backgroundTint="@color/luxe_green"
-                android:text="Confirm Booking"
-                android:textColor="@color/white" />
+                android:layout_marginStart="8dp"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="8dp">
+
+                <Button
+                    android:id="@+id/buttonConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:backgroundTint="#4CAF50"
+                    android:text="✅ Complete Reservation"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:elevation="0dp"
+                    android:stateListAnimator="@null" />
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
