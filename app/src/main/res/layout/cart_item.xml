@@ -6,20 +6,20 @@
     android:layout_marginStart="16dp"
     android:layout_marginEnd="16dp"
     android:layout_marginBottom="16dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="4dp"
-    app:strokeColor="#E0E0E0"
-    app:strokeWidth="1dp">
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:strokeColor="#D0D0D0"
+    app:strokeWidth="0.5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Image with badge -->
+        <!-- Image with enhanced badge -->
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="180dp">
+            android:layout_height="200dp">
 
             <ImageView
                 android:id="@+id/imageViewRoom"
@@ -28,151 +28,270 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/hotel" />
 
-            <TextView
+            <!-- Gradient overlay for better text visibility -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/gradient_overlay" />
+
+            <!-- Rating badge -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_margin="12dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp">
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/star"
+                    app:tint="@color/luxe_gold_light" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4.8"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Price badge with new styling -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_margin="12dp"
                 android:background="@drawable/price_badge_background"
+                android:gravity="center"
+                android:orientation="vertical"
                 android:paddingHorizontal="12dp"
-                android:paddingVertical="4dp"
-                android:text="$250/night"
-                android:textColor="@color/white"
-                android:textSize="14sp"
-                android:textStyle="bold" />
+                android:paddingVertical="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$299"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/night"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
         </RelativeLayout>
 
-        <!-- Content area -->
+        <!-- Content area with enhanced styling -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="20dp">
 
-            <!-- Title -->
+            <!-- Title with subtitle -->
             <TextView
                 android:id="@+id/textViewRoomTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Deluxe Ocean View Room"
+                android:text="Premium Beachfront Suite"
                 android:textColor="@color/text_dark"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
-
-            <View
-                android:layout_width="60dp"
-                android:layout_height="2dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="12dp"
-                android:background="@color/luxe_green" />
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:gravity="center_vertical">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/calender"
-                    android:tint="@color/luxe_green" />
-
-                <TextView
-                    android:id="@+id/textViewStayDates"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Apr 15, 2025 - Apr 20, 2025 (5 nights)"
-                    android:textColor="@color/text_dark"
-                    android:textSize="14sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="@drawable/price_highlight_background"
-                android:gravity="center_vertical"
-                android:padding="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total: "
-                    android:textColor="@color/text_dark"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textViewRoomPrice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="$1,250"
-                    android:textColor="@color/luxe_green"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-
-            <!-- Services section -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Services Included"
-                android:textColor="@color/text_dark"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:layout_marginTop="4dp"
+                android:text="Panoramic ocean views • King bed • Private balcony"
+                android:textColor="@color/text_medium"
+                android:textSize="14sp" />
 
-            <!-- Meal plan -->
+            <!-- Enhanced divider -->
+            <View
+                android:layout_width="80dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/background_gradient" />
+
+            <!-- Stay dates with enhanced styling -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="4dp"
-                android:gravity="center_vertical">
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical"
+                android:padding="12dp">
 
                 <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/restaurant"
-                    android:tint="@color/luxe_green" />
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/calender"
+                    app:tint="@color/luxe_green" />
 
-                <TextView
-                    android:id="@+id/textViewMealPlan"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Meal Plan: Breakfast, Lunch, Dinner"
-                    android:textColor="@color/text_dark"
-                    android:textSize="14sp" />
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Check-in • Check-out"
+                        android:textColor="@color/text_medium"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textViewStayDates"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="May 12, 2025 - May 17, 2025 (5 nights)"
+                        android:textColor="@color/text_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Activities -->
+            <!-- Enhanced price section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:gravity="center_vertical">
+                android:background="@drawable/price_highlight_background"
+                android:gravity="center_vertical"
+                android:padding="16dp">
 
-                <ImageView
-                    android:layout_width="16dp"
-                    android:layout_height="16dp"
-                    android:layout_marginEnd="8dp"
-                    android:src="@drawable/activity"
-                    android:tint="@color/luxe_green" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount"
+                        android:textColor="@color/text_medium"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/textViewRoomPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$1,495"
+                        android:textColor="@color/luxe_green"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
                 <TextView
-                    android:id="@+id/textViewActivities"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Activities: Spa, Snorkeling, Yoga"
-                    android:textColor="@color/text_dark"
-                    android:textSize="14sp" />
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="4dp"
+                    android:text="15% OFF"
+                    android:textColor="@color/white"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- Enhanced services section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Premium Inclusions"
+                android:textColor="@color/text_dark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
+            <!-- Enhanced meal plan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/restaurant"
+                    app:tint="@color/luxe_green" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Gourmet Dining"
+                        android:textColor="@color/text_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewMealPlan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="All-inclusive: Breakfast buffet, à la carte lunch and dinner"
+                        android:textColor="@color/text_medium"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Enhanced activities -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/activity"
+                    app:tint="@color/luxe_green" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Exclusive Experiences"
+                        android:textColor="@color/text_dark"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textViewActivities"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Luxury spa treatments, private beach access, sunset yoga"
+                        android:textColor="@color/text_medium"
+                        android:textSize="13sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Enhanced button section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -183,22 +302,28 @@
                     android:id="@+id/buttonRemove"
                     style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_width="0dp"
-                    android:layout_height="48dp"
+                    android:layout_height="52dp"
                     android:layout_marginEnd="8dp"
                     android:layout_weight="1"
-                    android:text="Remove"
+                    android:text="Cancel Booking"
                     android:textColor="@color/error_red"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp"
                     app:strokeColor="@color/error_red"
-                    app:strokeWidth="1dp" />
+                    app:strokeWidth="2dp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/buttonModify"
                     android:layout_width="0dp"
-                    android:layout_height="48dp"
+                    android:layout_height="52dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/luxe_green"
-                    android:text="Modify"
-                    android:textColor="@color/white" />
+                    android:text="Customize Stay"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="12dp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
