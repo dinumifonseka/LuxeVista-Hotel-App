@@ -59,7 +59,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Welcome to LuxeVista"
+                    android:text="Experience Paradise at LuxeVista"
                     android:textColor="@color/white"
                     android:textSize="28sp"
                     android:textStyle="bold"
@@ -103,7 +103,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Your Luxury Experience"
+                        android:text="Unparalleled Luxury Awaits"
                         android:textColor="@color/luxe_green"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -119,7 +119,7 @@
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif"
                         android:lineSpacingExtra="4dp"
-                        android:text="Discover what makes LuxeVista the perfect destination for your retreat. Our exclusive services and amenities are designed to provide the ultimate luxury experience."
+                        android:text="Immerse yourself in the epitome of elegance and comfort. Our world-class facilities and personalized service create unforgettable memories for discerning travelers."
                         android:textColor="@color/text_dark"
                         android:textSize="14sp" />
 
@@ -136,7 +136,7 @@
                             android:layout_weight="1"
                             android:fontFamily="sans-serif-medium"
                             android:letterSpacing="0.05"
-                            android:text="Book Now"
+                            android:text="Reserve Now"
                             android:textAllCaps="false"
                             android:textSize="16sp"
                             app:backgroundTint="@color/luxe_gold"
@@ -152,7 +152,7 @@
                             android:layout_weight="1"
                             android:fontFamily="sans-serif-medium"
                             android:letterSpacing="0.05"
-                            android:text="Virtual Tour"
+                            android:text="Explore Virtually"
                             android:textAllCaps="false"
                             android:textColor="@color/luxe_green"
                             android:textSize="16sp"
@@ -170,7 +170,7 @@
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="What We Offer"
+                android:text="Exceptional Amenities"
                 android:textColor="@color/luxe_green"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -214,14 +214,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@drawable/kingbed"
-                            android:tint="@color/luxe_green" />
+                            app:tint="@color/luxe_green" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Premium Rooms"
+                            android:text="Executive Suites"
                             android:textColor="@color/text_dark"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -231,7 +231,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="sans-serif"
-                            android:text="Luxury accommodations with ocean views"
+                            android:text="Spacious suites with panoramic coastal vistas"
                             android:textColor="@color/text_dark"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -260,14 +260,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@drawable/dining"
-                            android:tint="@color/luxe_green" />
+                            app:tint="@color/luxe_green" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Fine Dining"
+                            android:text="Culinary Excellence"
                             android:textColor="@color/text_dark"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -277,7 +277,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="sans-serif"
-                            android:text="Gourmet restaurants with world-class chefs"
+                            android:text="Award-winning cuisine from renowned chefs"
                             android:textColor="@color/text_dark"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -306,14 +306,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@drawable/carehospital"
-                            android:tint="@color/luxe_green" />
+                            app:tint="@color/luxe_green" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Wellness Center"
+                            android:text="Luxury Spa Retreat"
                             android:textColor="@color/text_dark"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -323,7 +323,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="sans-serif"
-                            android:text="Complete spa and fitness facilities"
+                            android:text="Rejuvenating treatments and wellness programs"
                             android:textColor="@color/text_dark"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -352,14 +352,14 @@
                             android:layout_width="48dp"
                             android:layout_height="48dp"
                             android:src="@drawable/beach_activities"
-                            android:tint="@color/luxe_green" />
+                            app:tint="@color/luxe_green" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Beach Activities"
+                            android:text="Adventure Paradise"
                             android:textColor="@color/text_dark"
                             android:textSize="16sp"
                             android:textStyle="bold" />
@@ -369,7 +369,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="sans-serif"
-                            android:text="Water sports and beachfront entertainment"
+                            android:text="Exciting water adventures and coastal experiences"
                             android:textColor="@color/text_dark"
                             android:textSize="12sp" />
                     </LinearLayout>
@@ -383,7 +383,7 @@
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="32dp"
                 android:fontFamily="sans-serif-medium"
-                android:text="Special Offers"
+                android:text="Exclusive Packages"
                 android:textColor="@color/luxe_green"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -417,7 +417,7 @@
                         android:padding="12dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/honeymoon"
-                        android:tint="@color/black"
+                        app:tint="@color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -436,7 +436,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Honeymoon Package"
+                            android:text="Romantic Getaway"
                             android:textColor="@color/luxe_green"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -446,7 +446,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="sans-serif"
-                            android:text="30% off on luxury suite, spa treatment, and romantic dinner"
+                            android:text="Save 35% on premium suite, couples massage, and candlelit dining"
                             android:textColor="@color/text_dark"
                             android:textSize="14sp" />
 
@@ -457,7 +457,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="sans-serif-medium"
-                            android:text="View Details"
+                            android:text="Learn More"
                             android:textAllCaps="false"
                             android:textColor="@color/luxe_green_light"
                             app:icon="@drawable/arrow_right"
@@ -489,7 +489,7 @@
                         android:padding="12dp"
                         android:scaleType="centerCrop"
                         android:src="@drawable/relax"
-                        android:tint="@color/black"
+                        app:tint="@color/black"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
@@ -508,7 +508,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-medium"
-                            android:text="Weekend Escape"
+                            android:text="Luxury Weekend"
                             android:textColor="@color/luxe_green"
                             android:textSize="18sp"
                             android:textStyle="bold" />
@@ -518,7 +518,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="sans-serif"
-                            android:text="Book 2 nights and get 1 free, includes breakfast and spa access"
+                            android:text="Stay 2 nights, enjoy the 3rd complimentary with gourmet breakfast and spa perks"
                             android:textColor="@color/text_dark"
                             android:textSize="14sp" />
 
@@ -529,7 +529,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:fontFamily="sans-serif-medium"
-                            android:text="View Details"
+                            android:text="Learn More"
                             android:textAllCaps="false"
                             android:textColor="@color/luxe_green_light"
                             app:icon="@drawable/arrow_right"
@@ -559,7 +559,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:text="Stay Updated"
+                        android:text="Join Our Community"
                         android:textColor="@color/white"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -569,7 +569,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
                         android:fontFamily="sans-serif"
-                        android:text="Subscribe to our newsletter for exclusive offers and updates"
+                        android:text="Be the first to discover new experiences and receive member-only privileges"
                         android:textColor="@color/white"
                         android:textSize="14sp" />
 
@@ -597,7 +597,7 @@
                         android:layout_marginTop="16dp"
                         android:fontFamily="sans-serif-medium"
                         android:letterSpacing="0.05"
-                        android:text="Subscribe"
+                        android:text="Join Now"
                         android:textAllCaps="false"
                         android:textSize="16sp"
                         app:backgroundTint="@color/luxe_gold"
