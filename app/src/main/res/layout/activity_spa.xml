@@ -59,7 +59,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Award-Winning Wellness Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -82,26 +81,19 @@
                     android:fontFamily="sans-serif"
                     android:lineSpacingExtra="6dp"
                     android:text="Our luxury spa offers a sanctuary of peace and tranquility where ancient healing traditions meet modern therapeutic techniques. Each treatment is customized to your unique needs, delivered by our certified wellness experts in serene treatment rooms."
-                    android:textColor="@color/text_dark"
+                    android:textColor="@color/black"
                     android:textSize="16sp" />
             </LinearLayout>
 
-            <!-- Signature Treatments Section -->
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="Signature Treatments"
-                    android:textColor="@color/luxe_green"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
+                android:fontFamily="sans-serif-medium"
+                android:text="Signature Treatments"
+                android:textColor="@color/luxe_green"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -116,7 +108,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
-                    <!-- Aromatherapy Massage Card -->
+                    <!-- Signature Treatment Cards -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="280dp"
                         android:layout_height="220dp"
@@ -164,7 +156,6 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Hot Stone Therapy Card -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="280dp"
                         android:layout_height="220dp"
@@ -183,7 +174,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="140dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/got_stone" />
+                                android:src="@drawable/hot_stone" />
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -212,7 +203,6 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Luxury Facial Card -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="280dp"
                         android:layout_height="220dp"
@@ -260,7 +250,6 @@
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>
 
-                    <!-- Detox Body Wrap Card -->
                     <com.google.android.material.card.MaterialCardView
                         android:layout_width="280dp"
                         android:layout_height="220dp"
@@ -558,7 +547,7 @@
                     android:textColor="@color/text_dark"
                     android:textSize="16sp" />
 
-                <com.google.android.material.button.MaterialButton
+                <Button
                     android:id="@+id/buttonBookNow"
                     android:layout_width="match_parent"
                     android:layout_height="56dp"
