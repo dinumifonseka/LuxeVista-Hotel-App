@@ -4,135 +4,246 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="4dp">
+    android:layout_marginBottom="12dp"
+    android:layout_marginHorizontal="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp"
+        >
 
+        <!-- Header Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Booking Details"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            android:gravity="center" />
+
+        <!-- Booking ID Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/booking"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/luxe_green_light" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Booking ID: "
-                android:textColor="@color/text_dark"
-                android:textStyle="bold" />
+                android:text="Booking Reference:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/textViewBookingId"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_dark" />
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="end" />
         </LinearLayout>
 
+        <!-- Room Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/room1"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/luxe_green_light" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Room: "
-                android:textColor="@color/text_dark"
-                android:textStyle="bold" />
+                android:text="Accommodation:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/textViewRoomName"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_dark" />
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="end" />
         </LinearLayout>
 
+        <!-- Dates Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/calender"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/luxe_green_light" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dates: "
-                android:textColor="@color/text_dark"
-                android:textStyle="bold" />
+                android:text="Stay Period:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/textViewBookingDates"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_dark" />
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="end" />
         </LinearLayout>
 
+        <!-- Services Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="12dp"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_services"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/luxe_green_light" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Services: "
-                android:textColor="@color/text_dark"
-                android:textStyle="bold" />
+                android:text="Additional Services:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/textViewBookingServices"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_dark" />
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="end" />
         </LinearLayout>
 
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/luxe_green"
+            android:layout_marginVertical="8dp" />
+
+        <!-- Total Row (Highlighted) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="12dp"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_money"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/luxe_green" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total: "
-                android:textColor="@color/text_dark"
+                android:text="Total Amount:"
+                android:textColor="@color/black"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/textViewBookingTotal"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:textColor="@color/luxe_green"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="end" />
         </LinearLayout>
 
+        <!-- Status Row -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_status"
+                android:layout_marginEnd="8dp"
+                app:tint="@color/error_red" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Status: "
-                android:textColor="@color/text_dark"
-                android:textStyle="bold" />
+                android:text="Booking Status:"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
 
             <TextView
                 android:id="@+id/textViewBookingStatus"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_dark" />
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="end"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
