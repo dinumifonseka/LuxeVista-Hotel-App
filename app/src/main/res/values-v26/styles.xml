@@ -8,20 +8,4 @@
         <item name="android:fontFamily">sans-serif</item>
         <item name="android:justificationMode">inter_word</item>
     </style>
-
-        <style name="BodyTextStyle" tools:ignore="DuplicateDefinition">
-                <item name="android:textSize">17sp</item>
-                <item name="android:textColor">@color/text_dark</item>
-                <item name="android:lineSpacingExtra">4dp</item>
-                <item name="android:fontFamily">sans-serif</item>
-                <item name="android:justificationMode">inter_word</item>
-        </style>
-
-        <style name="BodyTextStyle" tools:ignore="DuplicateDefinition">
-                <item name="android:textSize">17sp</item>
-                <item name="android:textColor">@color/text_dark</item>
-                <item name="android:lineSpacingExtra">4dp</item>
-                <item name="android:fontFamily">sans-serif</item>
-                <item name="android:justificationMode">inter_word</item>
-        </style>
 </resources>
