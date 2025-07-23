@@ -26,7 +26,7 @@
                 android:paddingHorizontal="16dp">
 
                 <ImageView
-                    android:id="@+id/buttonBack"
+                    android:id="@+id/poolback"
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:padding="2dp"
@@ -142,7 +142,7 @@
                 android:clipToPadding="false"
                 android:overScrollMode="never" />
 
-
+            <!-- All Rooms Section -->
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
                 android:clipToPadding="false"
                 android:overScrollMode="never" />
 
-
+            <!-- No Results Layout -->
             <LinearLayout
                 android:id="@+id/layoutNoResults"
                 android:layout_width="match_parent"
