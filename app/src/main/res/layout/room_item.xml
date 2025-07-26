@@ -155,7 +155,7 @@
                     android:text="Colombo Oceanfront Hotel"
                     android:textColor="@color/text_medium"
                     android:textSize="14sp"
-                    app:drawableStartCompat="@drawable/location" />
+                />
             </LinearLayout>
 
             <!-- Enhanced Room Features -->
@@ -163,7 +163,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
                 <!-- Wifi -->
                 <androidx.cardview.widget.CardView
@@ -245,7 +245,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:paddingHorizontal="12dp"
                         android:paddingVertical="8dp">
 
