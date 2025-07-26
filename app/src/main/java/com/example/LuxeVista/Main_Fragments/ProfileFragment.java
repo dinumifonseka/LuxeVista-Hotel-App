@@ -96,20 +96,28 @@ public class ProfileFragment extends Fragment {
             String email = editTextEmailLogin.getText().toString().trim();
             String password = editTextPasswordLogin.getText().toString().trim();
 
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(getContext(), "Please fill all fields", Toast.LENGTH_SHORT).show();
+            if (email.isEmpty()) {
+                Toast.makeText(getContext(), "Please enter your email address", Toast.LENGTH_SHORT).show();
+            } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                Toast.makeText(getContext(), "Please enter a valid email address", Toast.LENGTH_SHORT).show();
+            } else if (password.isEmpty()) {
+                Toast.makeText(getContext(), "Please enter your password", Toast.LENGTH_SHORT).show();
             } else {
-                UserModel user = dbHelper.loginUser(email, password);
-                if (user != null) {
+                UserModel user = dbHelper.getUserByEmail(email); // Add this method in DBHelper if not present
+
+                if (user == null) {
+                    Toast.makeText(getContext(), "No user found with this email", Toast.LENGTH_SHORT).show();
+                } else if (!user.getPassword().equals(password)) {
+                    Toast.makeText(getContext(), "Incorrect password", Toast.LENGTH_SHORT).show();
+                } else {
                     sessionManager.saveLoginSession(user.getId(), user.getFirstName(), user.getLastName(),
                             user.getEmail(), user.getPhone(), user.getNic());
                     Toast.makeText(getContext(), "Login successful", Toast.LENGTH_SHORT).show();
                     updateUI();
-                } else {
-                    Toast.makeText(getContext(), "Invalid email or password", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
 
         buttonCreateAccount.setOnClickListener(v -> {
             String firstName = editTextFirstNameSignup.getText().toString().trim();
